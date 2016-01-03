@@ -8,3 +8,4 @@
 moc*.cpp
 Makefile
 *.app*
+ui_*.h
