@@ -1,0 +1,10 @@
+#qt file
+*.pro.user
+.qmake.*
+
+#cpp compile
+
+*.o
+moc*.cpp
+Makefile
+*.app*
