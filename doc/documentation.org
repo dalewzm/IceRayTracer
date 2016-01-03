@@ -1,0 +1,18 @@
+* Ice Ray Tracer Documentation
+-[[#How to use][How to Use]]
+-[[#goals][Goals]]
+-[[#FAQ][FAQ]]
+* Goals
+* How to Use
+** load file and render
+** Scene file definition
+Scene file consists of a sequence of lines, each of which has a command.
+The lines have the following form:
++ *# comments* This is a line of comments.IceRayTracer will ignore
+  any lines starting with a #.
++ *Blank line* The input scene file can have blank lines, it's be ignored
+  too.
++ *command parameter1 parameter2 ...* The first part of the line is always
+  the command. Based on what the command is, it has certain parameters
+  should be parsed appropriately.
+* FAQ
