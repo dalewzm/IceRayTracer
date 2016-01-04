@@ -1,11 +1,14 @@
 * Ice Ray Tracer Documentation
--[[#How to use][How to Use]]
--[[#goals][Goals]]
+-[[#How to use][How to Use
+]]
+-[[#goals][Goals
+]]
 -[[#FAQ][FAQ]]
 * Goals
 * How to Use
 ** load file and render
 ** Scene file definition
+*This file definition comes from open course CSE167x*
 Scene file consists of a sequence of lines, each of which has a command.
 The lines have the following form:
 + *# comments* This is a line of comments.IceRayTracer will ignore
@@ -15,4 +18,16 @@ The lines have the following form:
 + *command parameter1 parameter2 ...* The first part of the line is always
   the command. Based on what the command is, it has certain parameters
   should be parsed appropriately.
+*** command specification 
+**** General
++ *size width height:* The size command must be the first command of the file, which controls the image size.
++ *maxdepth depth:* The maximum depth (number of bounces) for a ray (default should be 5).
++ *output filename:* The output file to which the image should be written. You can either require this to be specified in the input, or you can use a suitable default like stdout or raytrace.png (The final files should be .png, with the specific names the autograder requests)
+**** Camera
+**** Geometry
+**** Transformations
+**** Lights
+**** Materials
+
+
 * FAQ
