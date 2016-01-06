@@ -41,7 +41,7 @@
        <height>299</height>
       </rect>
      </property>
-     <widget class="QLabel" name="label">
+     <widget class="QLabel" name="resultLabel">
       <property name="geometry">
        <rect>
         <x>20</x>
@@ -239,8 +239,8 @@
    <slot>openFile()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>238</x>
-     <y>180</y>
+     <x>-1</x>
+     <y>-1</y>
     </hint>
     <hint type="destinationlabel">
      <x>345</x>

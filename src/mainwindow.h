@@ -2,7 +2,7 @@
 #define MAINWINDOW_H
 
 #include <QMainWindow>
-
+#include<QColor>
 namespace Ui {
 class MainWindow;
 }
@@ -16,6 +16,7 @@ public:
     ~MainWindow();
 public slots:
     bool openFile();
+    bool setPixel(int x,int y, QColor pixelColor);
 
 private:
     Ui::MainWindow *ui;

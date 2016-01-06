@@ -8,7 +8,7 @@
 * How to Use
 ** load file and render
 ** Scene file definition
-*This file definition comes from open course CSE167x*
+*This file definition comes from open course CSE167x*.
 Scene file consists of a sequence of lines, each of which has a command.
 The lines have the following form:
 + *# comments* This is a line of comments.IceRayTracer will ignore
@@ -24,10 +24,21 @@ The lines have the following form:
 + *maxdepth depth:* The maximum depth (number of bounces) for a ray (default should be 5).
 + *output filename:* The output file to which the image should be written. You can either require this to be specified in the input, or you can use a suitable default like stdout or raytrace.png (The final files should be .png, with the specific names the autograder requests)
 **** Camera
+*camera lookfromx lookfromy lookfromz lookatx lookaty lookatz upx upy upz fov:*
+ specifies the camera in the standard way,  Note that fov stands for the field
+  of view in the y direction. The field of view in the x direction will be determined
+  by the image size. The world aspect ratio (distinct from the width and
+  height that determine image aspect ratio) is always 1;
 **** Geometry
 **** Transformations
 **** Lights
 **** Materials
 
+* Coding Style
+** Header Files
+** Naming
+** Scoping
+** Classes
+ every class has a .h file associated with a .cpp file
 
 * FAQ

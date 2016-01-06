@@ -36,7 +36,7 @@ public:
     QWidget *centralWidget;
     QScrollArea *scrollArea;
     QWidget *scrollAreaWidgetContents;
-    QLabel *label;
+    QLabel *resultLabel;
     QLabel *label_2;
     QPushButton *playButton;
     QProgressBar *progressBar;
@@ -76,9 +76,9 @@ public:
         scrollAreaWidgetContents = new QWidget();
         scrollAreaWidgetContents->setObjectName(QStringLiteral("scrollAreaWidgetContents"));
         scrollAreaWidgetContents->setGeometry(QRect(0, 0, 419, 299));
-        label = new QLabel(scrollAreaWidgetContents);
-        label->setObjectName(QStringLiteral("label"));
-        label->setGeometry(QRect(20, 25, 361, 261));
+        resultLabel = new QLabel(scrollAreaWidgetContents);
+        resultLabel->setObjectName(QStringLiteral("resultLabel"));
+        resultLabel->setGeometry(QRect(20, 25, 361, 261));
         scrollArea->setWidget(scrollAreaWidgetContents);
         label_2 = new QLabel(centralWidget);
         label_2->setObjectName(QStringLiteral("label_2"));
@@ -171,7 +171,7 @@ public:
     {
         MainWindow->setWindowTitle(QApplication::translate("MainWindow", "MainWindow", 0));
         actionOpen->setText(QApplication::translate("MainWindow", "Scene", 0));
-        label->setText(QString());
+        resultLabel->setText(QString());
         label_2->setText(QString());
         playButton->setText(QApplication::translate("MainWindow", "Render", 0));
         label_7->setText(QApplication::translate("MainWindow", "BlockSize", 0));
