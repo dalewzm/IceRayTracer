@@ -208,11 +208,17 @@
    </property>
    <widget class="QMenu" name="menu">
     <property name="title">
-     <string>open</string>
+     <string>Open</string>
     </property>
     <addaction name="actionOpen"/>
    </widget>
+   <widget class="QMenu" name="menu_2">
+    <property name="title">
+     <string>About</string>
+    </property>
+   </widget>
    <addaction name="menu"/>
+   <addaction name="menu_2"/>
   </widget>
   <widget class="QToolBar" name="mainToolBar">
    <attribute name="toolBarArea">
@@ -248,8 +254,25 @@
     </hint>
    </hints>
   </connection>
+  <connection>
+   <sender>playButton</sender>
+   <signal>clicked()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>renderScene()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>628</x>
+     <y>379</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>494</x>
+     <y>374</y>
+    </hint>
+   </hints>
+  </connection>
  </connections>
  <slots>
   <slot>openFile()</slot>
+  <slot>renderScene()</slot>
  </slots>
 </ui>

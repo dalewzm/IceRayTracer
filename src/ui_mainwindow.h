@@ -52,6 +52,7 @@ public:
     QLabel *label_4;
     QMenuBar *menuBar;
     QMenu *menu;
+    QMenu *menu_2;
     QToolBar *mainToolBar;
     QStatusBar *statusBar;
 
@@ -150,6 +151,8 @@ public:
         menuBar->setGeometry(QRect(0, 0, 692, 22));
         menu = new QMenu(menuBar);
         menu->setObjectName(QStringLiteral("menu"));
+        menu_2 = new QMenu(menuBar);
+        menu_2->setObjectName(QStringLiteral("menu_2"));
         MainWindow->setMenuBar(menuBar);
         mainToolBar = new QToolBar(MainWindow);
         mainToolBar->setObjectName(QStringLiteral("mainToolBar"));
@@ -159,10 +162,12 @@ public:
         MainWindow->setStatusBar(statusBar);
 
         menuBar->addAction(menu->menuAction());
+        menuBar->addAction(menu_2->menuAction());
         menu->addAction(actionOpen);
 
         retranslateUi(MainWindow);
         QObject::connect(actionOpen, SIGNAL(triggered()), MainWindow, SLOT(openFile()));
+        QObject::connect(playButton, SIGNAL(clicked()), MainWindow, SLOT(renderScene()));
 
         QMetaObject::connectSlotsByName(MainWindow);
     } // setupUi
@@ -180,7 +185,8 @@ public:
         label_6->setText(QApplication::translate("MainWindow", "300", 0));
         label_3->setText(QApplication::translate("MainWindow", "Height", 0));
         label_4->setText(QApplication::translate("MainWindow", "400", 0));
-        menu->setTitle(QApplication::translate("MainWindow", "open", 0));
+        menu->setTitle(QApplication::translate("MainWindow", "Open", 0));
+        menu_2->setTitle(QApplication::translate("MainWindow", "About", 0));
     } // retranslateUi
 
 };

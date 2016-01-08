@@ -3,6 +3,7 @@
 
 #include <QMainWindow>
 #include<QColor>
+#include "renderViewController.h"
 namespace Ui {
 class MainWindow;
 }
@@ -16,10 +17,15 @@ public:
     ~MainWindow();
 public slots:
     bool openFile();
+    bool renderScene();
+    bool adjustLabelSize();
     bool setPixel(int x,int y, QColor pixelColor);
-
+private:
+    void setupConnections();
 private:
     Ui::MainWindow *ui;
+    RenderViewController *viewControllerPtr;
+    QImage *labelImg;
 };
 
 #endif // MAINWINDOW_H
