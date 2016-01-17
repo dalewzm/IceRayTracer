@@ -13,6 +13,7 @@ class RayTracer:public QThread{
   ~RayTracer();
  public:
   bool loadSceneFile(QString filePath);
+protected:
   void run();
 private:
   bool buildScene();

@@ -7,7 +7,7 @@
     <x>0</x>
     <y>0</y>
     <width>692</width>
-    <height>433</height>
+    <height>492</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -20,7 +20,7 @@
       <x>13</x>
       <y>13</y>
       <width>421</width>
-      <height>301</height>
+      <height>331</height>
      </rect>
     </property>
     <property name="sizePolicy">
@@ -38,20 +38,29 @@
        <x>0</x>
        <y>0</y>
        <width>419</width>
-       <height>299</height>
+       <height>329</height>
       </rect>
      </property>
      <widget class="QLabel" name="resultLabel">
       <property name="geometry">
        <rect>
         <x>20</x>
-        <y>25</y>
+        <y>15</y>
         <width>361</width>
-        <height>261</height>
+        <height>301</height>
        </rect>
+      </property>
+      <property name="sizePolicy">
+       <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+        <horstretch>0</horstretch>
+        <verstretch>0</verstretch>
+       </sizepolicy>
       </property>
       <property name="text">
        <string/>
+      </property>
+      <property name="scaledContents">
+       <bool>true</bool>
       </property>
      </widget>
     </widget>
@@ -78,8 +87,8 @@
    <widget class="QPushButton" name="playButton">
     <property name="geometry">
      <rect>
-      <x>560</x>
-      <y>330</y>
+      <x>540</x>
+      <y>360</y>
       <width>114</width>
       <height>32</height>
      </rect>
@@ -91,8 +100,8 @@
    <widget class="QProgressBar" name="progressBar">
     <property name="geometry">
      <rect>
-      <x>12</x>
-      <y>346</y>
+      <x>50</x>
+      <y>370</y>
       <width>171</width>
       <height>20</height>
      </rect>
@@ -216,6 +225,8 @@
     <property name="title">
      <string>About</string>
     </property>
+    <addaction name="actionInformation"/>
+    <addaction name="actionReport_Bug"/>
    </widget>
    <addaction name="menu"/>
    <addaction name="menu_2"/>
@@ -232,6 +243,16 @@
   <action name="actionOpen">
    <property name="text">
     <string>Scene</string>
+   </property>
+  </action>
+  <action name="actionInformation">
+   <property name="text">
+    <string>Information</string>
+   </property>
+  </action>
+  <action name="actionReport_Bug">
+   <property name="text">
+    <string>report Bug</string>
    </property>
   </action>
  </widget>

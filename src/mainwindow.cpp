@@ -2,6 +2,7 @@
 #include<QString>
 #include<QPixmap>
 #include <QImage>
+#include <QDebug>
 
 #include "mainwindow.h"
 #include "ui_mainwindow.h"
@@ -39,8 +40,11 @@ bool MainWindow::openFile()
     QString fileName = QFileDialog::getOpenFileName(this,tr("Open Image"),"./example/",tr("Scene file(*.scene)"));
     //need to update
 
-    labelImg->scaled(300,300,  Qt::KeepAspectRatio);
+    qDebug()<<labelImg->width()<<" , "<<labelImg->height()<<"\n";
+    *labelImg = labelImg->scaled(300,300);
+    qDebug()<<labelImg->width()<<" , "<<labelImg->height()<<"\n";
     labelImg->fill(Qt::white);
+    ui->resultLabel->resize(300,300);
     ui->resultLabel->setPixmap(QPixmap::fromImage(*labelImg));
     ret = true;
     return ret;
@@ -63,6 +67,7 @@ bool MainWindow::openFile()
 
  bool MainWindow::renderScene()
  {
+     //qDebug() <<"IN main thread"<< QThread::currentThreadId();
       viewControllerPtr->renderScene();
       return true;
  }

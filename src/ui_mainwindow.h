@@ -33,6 +33,8 @@ class Ui_MainWindow
 {
 public:
     QAction *actionOpen;
+    QAction *actionInformation;
+    QAction *actionReport_Bug;
     QWidget *centralWidget;
     QScrollArea *scrollArea;
     QWidget *scrollAreaWidgetContents;
@@ -60,14 +62,18 @@ public:
     {
         if (MainWindow->objectName().isEmpty())
             MainWindow->setObjectName(QStringLiteral("MainWindow"));
-        MainWindow->resize(692, 433);
+        MainWindow->resize(692, 492);
         actionOpen = new QAction(MainWindow);
         actionOpen->setObjectName(QStringLiteral("actionOpen"));
+        actionInformation = new QAction(MainWindow);
+        actionInformation->setObjectName(QStringLiteral("actionInformation"));
+        actionReport_Bug = new QAction(MainWindow);
+        actionReport_Bug->setObjectName(QStringLiteral("actionReport_Bug"));
         centralWidget = new QWidget(MainWindow);
         centralWidget->setObjectName(QStringLiteral("centralWidget"));
         scrollArea = new QScrollArea(centralWidget);
         scrollArea->setObjectName(QStringLiteral("scrollArea"));
-        scrollArea->setGeometry(QRect(13, 13, 421, 301));
+        scrollArea->setGeometry(QRect(13, 13, 421, 331));
         QSizePolicy sizePolicy(QSizePolicy::Preferred, QSizePolicy::Expanding);
         sizePolicy.setHorizontalStretch(0);
         sizePolicy.setVerticalStretch(0);
@@ -76,25 +82,31 @@ public:
         scrollArea->setWidgetResizable(true);
         scrollAreaWidgetContents = new QWidget();
         scrollAreaWidgetContents->setObjectName(QStringLiteral("scrollAreaWidgetContents"));
-        scrollAreaWidgetContents->setGeometry(QRect(0, 0, 419, 299));
+        scrollAreaWidgetContents->setGeometry(QRect(0, 0, 419, 329));
         resultLabel = new QLabel(scrollAreaWidgetContents);
         resultLabel->setObjectName(QStringLiteral("resultLabel"));
-        resultLabel->setGeometry(QRect(20, 25, 361, 261));
+        resultLabel->setGeometry(QRect(20, 15, 361, 301));
+        QSizePolicy sizePolicy1(QSizePolicy::Expanding, QSizePolicy::Expanding);
+        sizePolicy1.setHorizontalStretch(0);
+        sizePolicy1.setVerticalStretch(0);
+        sizePolicy1.setHeightForWidth(resultLabel->sizePolicy().hasHeightForWidth());
+        resultLabel->setSizePolicy(sizePolicy1);
+        resultLabel->setScaledContents(true);
         scrollArea->setWidget(scrollAreaWidgetContents);
         label_2 = new QLabel(centralWidget);
         label_2->setObjectName(QStringLiteral("label_2"));
         label_2->setGeometry(QRect(460, 190, 181, 121));
-        QSizePolicy sizePolicy1(QSizePolicy::Preferred, QSizePolicy::Preferred);
-        sizePolicy1.setHorizontalStretch(2);
-        sizePolicy1.setVerticalStretch(0);
-        sizePolicy1.setHeightForWidth(label_2->sizePolicy().hasHeightForWidth());
-        label_2->setSizePolicy(sizePolicy1);
+        QSizePolicy sizePolicy2(QSizePolicy::Preferred, QSizePolicy::Preferred);
+        sizePolicy2.setHorizontalStretch(2);
+        sizePolicy2.setVerticalStretch(0);
+        sizePolicy2.setHeightForWidth(label_2->sizePolicy().hasHeightForWidth());
+        label_2->setSizePolicy(sizePolicy2);
         playButton = new QPushButton(centralWidget);
         playButton->setObjectName(QStringLiteral("playButton"));
-        playButton->setGeometry(QRect(560, 330, 114, 32));
+        playButton->setGeometry(QRect(540, 360, 114, 32));
         progressBar = new QProgressBar(centralWidget);
         progressBar->setObjectName(QStringLiteral("progressBar"));
-        progressBar->setGeometry(QRect(12, 346, 171, 20));
+        progressBar->setGeometry(QRect(50, 370, 171, 20));
         progressBar->setValue(11);
         label_7 = new QLabel(centralWidget);
         label_7->setObjectName(QStringLiteral("label_7"));
@@ -164,6 +176,8 @@ public:
         menuBar->addAction(menu->menuAction());
         menuBar->addAction(menu_2->menuAction());
         menu->addAction(actionOpen);
+        menu_2->addAction(actionInformation);
+        menu_2->addAction(actionReport_Bug);
 
         retranslateUi(MainWindow);
         QObject::connect(actionOpen, SIGNAL(triggered()), MainWindow, SLOT(openFile()));
@@ -176,6 +190,8 @@ public:
     {
         MainWindow->setWindowTitle(QApplication::translate("MainWindow", "MainWindow", 0));
         actionOpen->setText(QApplication::translate("MainWindow", "Scene", 0));
+        actionInformation->setText(QApplication::translate("MainWindow", "Information", 0));
+        actionReport_Bug->setText(QApplication::translate("MainWindow", "report Bug", 0));
         resultLabel->setText(QString());
         label_2->setText(QString());
         playButton->setText(QApplication::translate("MainWindow", "Render", 0));

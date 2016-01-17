@@ -10,12 +10,10 @@ RenderViewController::~RenderViewController()
 {
   if(rayTracerPtr)
         delete rayTracerPtr;
-
 }
 
 void RenderViewController::getApixelValue(int x,int y,QColor rgb)
 {
-    //printf("get a signal and process: %d %d %d\n",x,y,rgb.red());
     emit notifyGetPixel( x, y,rgb);
 }
 
