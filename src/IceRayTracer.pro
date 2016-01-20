@@ -18,7 +18,9 @@ SOURCES += main.cpp\
     model/rayTracer/rayTracer.cpp \
     model/sceneParser/geometryObject.cpp \
     model/sceneParser/parser.cpp \
-    model/sceneParser/scene.cpp
+    model/sceneParser/scene.cpp \
+    model/rayTracer/screenBuffer.cpp \
+    model/rayTracer/screenPixel.cpp
 
 HEADERS  += mainwindow.h \
     ui_mainwindow.h \
@@ -26,6 +28,11 @@ HEADERS  += mainwindow.h \
     model/rayTracer/rayTracer.h \
     model/sceneParser/geometryObject.h \
     model/sceneParser/parser.h \
-    model/sceneParser/scene.h
+    model/sceneParser/scene.h \
+    model/rayTracer/screenBuffer.h \
+    model/rayTracer/screenPixel.h
 
 FORMS    += mainwindow.ui
+
+RESOURCES += \
+    resources/resources.qrc

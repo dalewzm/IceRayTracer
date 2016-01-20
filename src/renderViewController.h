@@ -15,8 +15,8 @@ public slots:
 signals:
     void notifyGetPixel(int x,int y,QColor rgb);
 private:
-  //model class
-  RayTracer* rayTracerPtr;
+    //model class
+    RayTracer* rayTracerPtr;
 };
 
 

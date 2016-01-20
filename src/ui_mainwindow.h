@@ -188,7 +188,7 @@ public:
 
     void retranslateUi(QMainWindow *MainWindow)
     {
-        MainWindow->setWindowTitle(QApplication::translate("MainWindow", "MainWindow", 0));
+        MainWindow->setWindowTitle(QApplication::translate("MainWindow", "IceRayTracer", 0));
         actionOpen->setText(QApplication::translate("MainWindow", "Scene", 0));
         actionInformation->setText(QApplication::translate("MainWindow", "Information", 0));
         actionReport_Bug->setText(QApplication::translate("MainWindow", "report Bug", 0));
