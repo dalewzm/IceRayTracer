@@ -40,9 +40,9 @@ bool MainWindow::openFile()
     QString fileName = QFileDialog::getOpenFileName(this,tr("Open Image"),"./example/",tr("Scene file(*.scene)"));
     //need to update
 
-    qDebug()<<labelImg->width()<<" , "<<labelImg->height()<<"\n";
+    //qDebug()<<labelImg->width()<<" , "<<labelImg->height()<<"\n";
     *labelImg = labelImg->scaled(300,300);
-    qDebug()<<labelImg->width()<<" , "<<labelImg->height()<<"\n";
+    //qDebug()<<labelImg->width()<<" , "<<labelImg->height()<<"\n";
     labelImg->fill(Qt::white);
     ui->resultLabel->resize(300,300);
     ui->resultLabel->setPixmap(QPixmap::fromImage(*labelImg));

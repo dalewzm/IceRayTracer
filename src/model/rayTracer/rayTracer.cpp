@@ -1,4 +1,3 @@
-#include "screenBuffer.h"
 #include "rayTracer.h"
 #include <cstdio>
 
@@ -27,12 +26,11 @@ bool RayTracer::buildScene()
     fprintf(stderr,"thread id is: %x",this->currentThreadId());
     for(int i=0; i<300; ++i){
         for(int j=0; j<300; ++j){
-            getScreenBuffer().mutex.lock();
-            if(getScreenBuffer().used == 1)
-                getScreenBuffer().bufferIsEmpty.wait(&getScreenBuffer().mutex);
+
             QColor rgb(Qt::black);
             emit calculatedApixel(i,j,rgb);
-            getScreenBuffer().bufferIsFull.wakeAll();
+            sleep(1);
+
         }
     }
     return true;
