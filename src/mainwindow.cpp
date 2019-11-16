@@ -3,7 +3,7 @@
 #include<QPixmap>
 #include <QImage>
 #include <QDebug>
-
+#include"renderViewController.h"
 #include "mainwindow.h"
 #include "ui_mainwindow.h"
 
@@ -13,7 +13,7 @@ MainWindow::MainWindow(QWidget *parent) :
 {
     ui->setupUi(this);
     ui->menuBar->addAction(ui->actionOpen);
-    viewControllerPtr = new RenderViewController();
+    viewControllerPtr = new RenderViewController(this);
     labelImg = new QImage(ui->resultLabel->width(),ui->resultLabel->height(),QImage::Format_ARGB32);
     setupConnections();
 }
@@ -30,8 +30,8 @@ MainWindow::~MainWindow()
 
 void MainWindow::setupConnections()
 {
-    connect( viewControllerPtr,SIGNAL(notifyGetPixel(int ,int ,QColor)),
-            this,SLOT(setPixel(int ,int ,QColor )));
+//    connect( viewControllerPtr,SIGNAL(notifyGetPixel(int ,int ,QColor)),
+//            this,SLOT(setPixel(int ,int ,QColor )));
 }
 
 bool MainWindow::openFile()

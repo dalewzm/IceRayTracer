@@ -3,10 +3,11 @@
 #include <QString>
 #include <QObject>
 #include "model/rayTracer/rayTracer.h"
+#include "mainwindow.h"
 class RenderViewController:public QObject{
     Q_OBJECT
 public:
-    RenderViewController();
+    RenderViewController(MainWindow* mainWindow);
     ~RenderViewController();
     bool parserFile(QString filePath);
     bool renderScene();
@@ -17,6 +18,7 @@ signals:
 private:
     //model class
     RayTracer* rayTracerPtr;
+    MainWindow* mainWindowPtr;
 };
 
 

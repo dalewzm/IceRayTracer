@@ -2,8 +2,8 @@
 #define MAINWINDOW_H
 
 #include <QMainWindow>
-#include<QColor>
-#include "renderViewController.h"
+#include <QColor>
+class RenderViewController;
 namespace Ui {
 class MainWindow;
 }
